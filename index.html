@@ -1,35 +1,58 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head> 
-        <meta charset="UTF-8">
-        <title>hello emily</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body> 
-        <section class="about-me">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello emily</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
         <h1>hello emily</h1>
-        <img src="https://github.com/emilyxfang/personal-website/blob/main/spring-fling.JPEG?raw=true">
-        <p>hey! my name is emily fang and i'm a 17 year old high-schooler from Andover, MA.</p>
-        </ul>
-        </section>
+        <button onclick="showTab('home', this)">Home</button>
+        <button onclick="showTab('passions', this)">Passions</button>
+        <button onclick="showTab('funfacts', this)">Fun Facts</button>
+      </div>
 
-        <section>
-            <h3>some of my interests include:</h3>
-            <ul>
-                <li>math 🧮</li>
-                <li>physics 💫</li>
-                <li>programming 💻</li>
-                <li>classics 🏛️</li>
-                <li>literature 📚</li>
-            </ul>
+<div id="home" class="tab-content active">
+    <h2>Home</h2>
+    <img src="https://github.com/emilyxfang/personal-website/blob/main/spring-fling.JPEG?raw=true" id = "spring-fling">
+    <p>Hello! I’m Emily, a 17-year-old from Andover, MA. This year, I will be a senior at Phillips Academy. I created this website as a personal coding project, so if you found it, congrats!</p>
+</div>
 
-            <h3>here are some fun facts about me!</h3>
-            <ul>
-                <li>mbti: 👷‍♀️ intj-t 📐</li>
-                <li> horoscope: 🌟 aries 🐏</li>
-                <li>zodiac: 🧧 year of the rat 🐀</li>
-                <li>spirit animal: 🐈‍⬛ cat/rabbit? 🐇</li>
-            </ul>
-        </section>
-    </body>
+<div id="passions" class="tab-content">
+    <h2>Passions</h2>
+    <h3>Math 🧮</h3>
+    <p>Math has been my <em>favorite</em> subject ever since I started school. I especially enjoy calculus and also love tutoring math--from addition to linear algebra!</p>
+
+
+    <h3>Physics 💫</h3>
+    <p>Physics is so difficult yet so fasinating. If I had to pick between Astronomy, Mechanics, and Electricity and Magnetism, I would go with E&M!</p>
+
+    <h3>Programming 💻</h3>
+    <p>Although I'm relatively new to programming, it has quickly become one of my favorite hobbies.</p>
+
+    <h3>Classics 🏛️</h3>
+    <p>Ever since I read the Percy Jackson series in 4th grade, I've been fascinated by the classics! Heres a piece of advice: you should definitely read the Iliad, the Odyssey, and the Aeneid (all three, in that order)!</p>
+
+    <h3>Reading 📚</h3>
+    <p>Reading is my other go-to pastime. My favorite genres include (but are not limited to 😉) Mystery, Classics, and Speculative Fiction. Make sure to check out my <a href="https://www.goodreads.com/user/show/190545683-emily-fang">Goodreads</a>!</p>
+</div>
+
+
+<div id="funfacts" class="tab-content">
+    <h2>Fun Facts</h2>
+    <p>Take this how-well-do-you-know-emily quiz to learn some fun facts about me that you didn't already know!</p>
+    <div id="quiz-container">
+        <div id="question-tracker"></div>
+        <p id="question"></p>
+        <div id="options"></div>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+      </div>
+      <div id="result" style="display:none;"></div>
+      <script src="quiz.js"></script>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
