@@ -1,0 +1,12 @@
+img {
+    width: 200px;
+    height: auto;
+}
+
+body {
+    background-color: #f4eacc;
+}
+.about-me {
+    text-align: center;
+    font-family: Georgia;
+}
